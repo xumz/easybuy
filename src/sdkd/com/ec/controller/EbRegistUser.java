@@ -11,7 +11,7 @@ import  sdkd.com.ec.model.EbUser;
 import  sdkd.com.ec.dao.impl.EbUserDao;
 
 /**
- * Created on 2016/7/7.
+ * Created by xmz on 2016/7/7.
  */
 @WebServlet(name = "EbRegistUser")
 public class EbRegistUser extends HttpServlet {

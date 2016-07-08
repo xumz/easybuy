@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Created  on 2016/7/7.
+ * Created by xmz on 2016/7/7.
  */
 @WebServlet(name = "EbHotPController")
 public class EbHotPController extends HttpServlet {

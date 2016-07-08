@@ -1,7 +1,7 @@
 package sdkd.com.ec.model;
 
 /**
- * Created  on 2016/7/7.
+ * Created by xmz  on 2016/7/7.
  */
 public class EbProduct {
     private  int ep_id;

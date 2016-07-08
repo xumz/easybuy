@@ -6,7 +6,7 @@ import java.sql.*;
 
 /**
  * 用户DAO
- * Created  on 2016/7/5.
+ * Created by xmz  on 2016/7/5.
  */
 public class EbUserDao extends BaseDao{
 

@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.*;
 
 /**
- * Created  on 2016/7/7.
+ * Created by xmz on 2016/7/7.
  */
 public class EbNoticeDao  extends BaseDao {
     public List<EbNotice>  getNotice() {

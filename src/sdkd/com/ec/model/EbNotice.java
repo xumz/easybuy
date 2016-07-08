@@ -5,7 +5,7 @@ import java.util.Date;
 import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Int;
 
 /**
- * Created  on 2016/7/7.
+ * Created by xmz  on 2016/7/7.
  */
 public class EbNotice {
     private Integer eba_id;

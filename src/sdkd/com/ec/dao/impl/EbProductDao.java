@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created  on 2016/7/7.
+ * Created by xmz on 2016/7/7.
  */
 public class EbProductDao extends BaseDao {
     public List<EbProduct> getProduct(){

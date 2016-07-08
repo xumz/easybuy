@@ -70,12 +70,12 @@
         <c:forEach  var="category" items="${categoryList}">
           <c:if test="${category.epc_parent_id==0}">
             <dt>${category.epc_name} </dt>
+        </c:if>
+        <c:forEach var="o_category" items="${categoryList}">
+          <c:if test="${o_category.epc_parent_id==category.epc_id}">
+            <dd> <a href="product-list.jsp">${o_category.epc_name}</a></dd>
           </c:if>
-          <c:forEach var="o_category" items="${categoryList}">
-            <c:if test="${o_category.epc_parent_id==category.epc_id}">
-              <dd> <a href="product-list.jsp">${o_category.epc_name}</a></dd>
-            </c:if>
-          </c:forEach>
+        </c:forEach>
 
         </c:forEach>
       </dl>

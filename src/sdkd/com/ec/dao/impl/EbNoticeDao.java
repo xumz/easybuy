@@ -12,13 +12,13 @@ import java.util.*;
 public class EbNoticeDao  extends BaseDao {
     public List<EbNotice>  getNews() {
         List<EbNotice> noticeList=new ArrayList<EbNotice>();
-       String sql="select * from easybuy_notice order by eno_create_time desc limit 0,7";
+       String sql="select * from easybuy_annuncement order by eba_time desc limit 0,7";
         try {
             ResultSet rs=this.executeSearch(sql,null);
             while (rs.next()){
                 EbNotice n=new EbNotice();
-                n.setEno_id(rs.getInt("eno_id"));
-                n.setEno_title(rs.getString("eno_title"));
+                n.setEba_id(rs.getInt("eba_id"));
+                n.setEba_title(rs.getString("eba_title"));
                 noticeList.add(n);
             }
         } catch (Exception e) {

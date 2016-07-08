@@ -21,7 +21,6 @@ public class EbNewsDao extends BaseDao {
                 EbNews news = new EbNews();
                 news.setEnId(rs.getInt("en_id"));
                 news.setEnTitle(rs.getString("en_title"));
-                news.setEnContent(rs.getString("en_Content"));
                 //添加到集合中
                 newsList.add(news);
             }

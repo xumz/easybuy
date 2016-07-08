@@ -1,43 +1,54 @@
 package sdkd.com.ec.model;
 
+import java.util.Date;
+
 /**
  * Created by sdust on 2016/7/7.
  */
 public class EbNotice {
-    private int eno_id;
-    private String eno_title;
-    private String eno_content;
+    private Integer eba_id;
+    private String eba_title;
+    private String eba_text;
+    private Date  eba_time;
 
-    public int getEno_id() {
-        return eno_id;
+    public Integer getEba_id() {
+        return eba_id;
     }
 
-    public void setEno_id(int eno_id) {
-        this.eno_id = eno_id;
+    public void setEba_id(Integer eba_id) {
+        this.eba_id = eba_id;
     }
 
-    public String getEno_content() {
-        return eno_content;
+    public String getEba_title() {
+        return eba_title;
     }
 
-    public void setEno_content(String eno_content) {
-        this.eno_content = eno_content;
+    public void setEba_title(String eba_title) {
+        this.eba_title = eba_title;
     }
 
-    public String getEno_title() {
-        return eno_title;
+    public String getEba_text() {
+        return eba_text;
     }
 
-    public void setEno_title(String eno_title) {
-        this.eno_title = eno_title;
+    public void setEba_text(String eba_text) {
+        this.eba_text = eba_text;
     }
 
-    @Override
-    public String toString() {
-        return "EbNotice{" +
-                "eno_id=" + eno_id +
-                ", eno_title='" + eno_title + '\'' +
-                ", eno_content='" + eno_content + '\'' +
-                '}';
+    public Date getEba_time() {
+        return eba_time;
     }
+
+    public void setEba_time(Date eba_time) {
+        this.eba_time = eba_time;
+    }
+
+    //@Override
+//    public String toString() {
+//        return "EbNotice{" +
+//                "eba_id=" + eba_id +
+//                ", eba_title='" + eba_title + '\'' +
+//                ", eba_text='" + eba_text+ '\'' +
+//                '}';
+//    }
 }

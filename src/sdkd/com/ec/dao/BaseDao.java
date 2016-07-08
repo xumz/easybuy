@@ -18,11 +18,12 @@ public class BaseDao {
      * @return
      */
     public Connection getConnection(){
+        Connection con1 = null;
         try {
             //1.加载驱动
             Class.forName(getPro("driver"));
             //2.桥梁--Connection
-            con = DriverManager.getConnection(getPro("url"),getPro("username"),getPro("password"));
+            con1 = DriverManager.getConnection(getPro("url"),getPro("username"),getPro("password"));
             //1.加载驱动
             /*Class.forName("com.mysql.jdbc.Driver");
             //2.桥梁--Connection
@@ -32,7 +33,7 @@ public class BaseDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return con;
+        return con1;
     }
 
     /**

@@ -9,12 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by 韩爽 on 2016/7/7.
+ * Created on 2016/7/7.
  */
 public class EbHotProductDao extends BaseDao {
-    public List<EbProduct> getProduct(){
-        List<EbProduct> productList=new ArrayList<EbProduct>();
-        String sql="select * from easybuy_product order by epc_id desc limit 0,12";
+    public List<EbProduct> getHotProduct(){
+        List<EbProduct> hotproductList=new ArrayList<EbProduct>();
+        String sql="select * from easybuy_product order by epc_id asc limit 0,12";
         ResultSet rs=this.executeSearch(sql,null);
         try {
             while (rs.next()){
@@ -23,13 +23,13 @@ public class EbHotProductDao extends BaseDao {
                 product.setEp_name(rs.getString("ep_name"));
                 product.setEp_description(rs.getString("ep_description"));
                 product.setEp_price(rs.getDouble("ep_price"));
-                productList.add(product);
+                hotproductList.add(product);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
 
-        return productList;
+        return hotproductList;
     }
 }

@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Created by SDUST-132 on 2016/7/6.
+ * Created  on 2016/7/6.
  */
 public class EbNewsController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -26,17 +26,5 @@ public class EbNewsController extends HttpServlet {
 
         //跳转
         request.getRequestDispatcher("/index.jsp").forward(request,response);
-
-        /**
-         * login
-         */
-        /*EbUser user =  login();
-        request.getSession().setAttribute("user",user);*/
-        /*String paraId = request.getParameter("id");
-        if(paraId!=null && !"".equals(paraId)){
-            int id = Integer.valueOf(id);
-            EbNews news = newsDao.getNewsById(id);
-            request.setAttribute("news",news);
-        }*/
     }
 }

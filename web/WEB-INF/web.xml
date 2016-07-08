@@ -17,7 +17,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>EbNoticeController</servlet-name>
-        <url-pattern>/pac.do</url-pattern>
+        <url-pattern>/notice.do</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -35,7 +35,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>EbCategoryController</servlet-name>
-        <url-pattern>/ec.do</url-pattern>
+        <url-pattern>/category.do</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -44,7 +44,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>EbProductController</servlet-name>
-        <url-pattern>/pro.do</url-pattern>
+        <url-pattern>/product.do</url-pattern>
     </servlet-mapping>
 
     <servlet>

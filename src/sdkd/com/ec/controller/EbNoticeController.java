@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Created by sdust on 2016/7/7.
+ * Created  on 2016/7/7.
  */
 @WebServlet(name = "EbNoticeController")
 public class EbNoticeController extends HttpServlet {
@@ -22,9 +22,8 @@ public class EbNoticeController extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
      EbNoticeDao noticeDao = new EbNoticeDao();
-        List<EbNotice> list = noticeDao.getNews();
+        List<EbNotice> list = noticeDao.getNotice();
         request.setAttribute("noticeList",list);
-
         //跳转
         request.getRequestDispatcher("/news.do").forward(request,response);
     }

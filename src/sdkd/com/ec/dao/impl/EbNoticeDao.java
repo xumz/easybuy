@@ -4,29 +4,27 @@ import sdkd.com.ec.dao.BaseDao;
 import sdkd.com.ec.model.EbNotice;
 
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.*;
 
 /**
- * Created by sdust on 2016/7/7.
+ * Created  on 2016/7/7.
  */
 public class EbNoticeDao  extends BaseDao {
-    public List<EbNotice>  getNews() {
+    public List<EbNotice>  getNotice() {
         List<EbNotice> noticeList=new ArrayList<EbNotice>();
-       String sql="select * from easybuy_annuncement order by eba_time desc limit 0,7";
+       String sql="select * from easybuy_annuncement order by eba_time desc limit 0,2";
         try {
             ResultSet rs=this.executeSearch(sql,null);
             while (rs.next()){
-                EbNotice n=new EbNotice();
-                n.setEba_id(rs.getInt("eba_id"));
-                n.setEba_title(rs.getString("eba_title"));
-                noticeList.add(n);
+                EbNotice notice=new EbNotice();
+                notice.setEba_id(rs.getInt("eba_id"));
+                notice.setEba_title(rs.getString("eba_title"));
+                noticeList.add(notice);
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
         }
-
-
         return noticeList;
     }
 }

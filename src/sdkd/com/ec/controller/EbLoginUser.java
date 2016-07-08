@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by 韩爽 on 2016/7/7.
+ * Created  on 2016/7/7.
  */
 @WebServlet(name = "EbLoginUser")
 public class EbLoginUser extends HttpServlet {

@@ -10,12 +10,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by 韩爽 on 2016/7/7.
+ * Created  on 2016/7/7.
  */
 public class EbProductDao extends BaseDao {
     public List<EbProduct> getProduct(){
         List<EbProduct> productList=new ArrayList<EbProduct>();
-        String sql="select * from easybuy_product order by epc_id desc limit 0,8";
+        String sql="select * from easybuy_product order by epc_id desc limit 7,15";
         ResultSet rs=this.executeSearch(sql,null);
         try {
             while (rs.next()){
@@ -29,8 +29,6 @@ public class EbProductDao extends BaseDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
         return productList;
     }
 }

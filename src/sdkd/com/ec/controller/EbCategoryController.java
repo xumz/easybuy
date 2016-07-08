@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by sdust on 2016/7/7.
+ * Created on 2016/7/7.
  */
 @WebServlet(name = "EbCategoryController")
 public class EbCategoryController extends HttpServlet {
@@ -25,7 +25,7 @@ public class EbCategoryController extends HttpServlet {
         EbCategoryDao categoryDao=new EbCategoryDao();
         List<EbCategory> categoryList=categoryDao.getCategory();
         request.setAttribute("categoryList",categoryList);
-        request.getRequestDispatcher("/pac.do").forward(request,response);
+        request.getRequestDispatcher("/notice.do").forward(request,response);
 
     }
 }

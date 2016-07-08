@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by SDUST-132 on 2016/7/6.
+ * Created  on 2016/7/6.
  */
 public class EbNewsDao extends BaseDao {
     public List<EbNews> getNews(){

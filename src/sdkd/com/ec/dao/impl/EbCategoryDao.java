@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by sdust on 2016/7/7.
+ * Created on 2016/7/7.
  */
 public class EbCategoryDao extends BaseDao {
       public List<EbCategory> getCategory(){

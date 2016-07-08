@@ -2,7 +2,7 @@ package sdkd.com.ec.model;
 import java.util.Date;
 /**
  * 用户表
- * Created by SDUST-132 on 2016/7/5.
+ * Created  on 2016/7/5.
  */
 public class EbUser {
     private String euId;

@@ -1,7 +1,7 @@
 package sdkd.com.ec.model;
 
 /**
- * Created by sdust on 2016/7/7.
+ * Created  on 2016/7/7.
  */
 public class EbCategory {
     private int epc_id;

@@ -111,7 +111,7 @@
         <h4>最新公告</h4>
         <ul>
           <c:forEach var="notice" items="${noticeList}">
-            <li><a href="news-view.jsp?id=${notice.eba_id}" target="_blank">${notice.ba_title}</a></li>
+            <li><a href="news-view.jsp?id=${notice.eba_id}" target="_blank">${notice.eba_title}</a></li>
           </c:forEach>
         </ul>
       </div>

@@ -3,7 +3,7 @@ package sdkd.com.ec.model;
 import java.util.Date;
 
 /**
- * Created by SDUST-132 on 2016/7/6.
+ * Created  on 2016/7/6.
  */
 public class EbNews {
     private Integer enId;

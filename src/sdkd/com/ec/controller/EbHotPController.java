@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Created by 韩爽 on 2016/7/7.
+ * Created  on 2016/7/7.
  */
 @WebServlet(name = "EbHotPController")
 public class EbHotPController extends HttpServlet {
@@ -22,8 +22,8 @@ public class EbHotPController extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         EbHotProductDao hotProductDao=new EbHotProductDao();
-        List<EbProduct> hotproductList=hotProductDao.getProduct();
+        List<EbProduct> hotproductList=hotProductDao.getHotProduct();
         request.setAttribute("hotproductList",hotproductList);
-        request.getRequestDispatcher("/pro.do").forward(request,response);
+        request.getRequestDispatcher("/product.do").forward(request,response);
     }
 }

@@ -21,6 +21,8 @@ public class EbProductController extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("utf-8");
         EbProductDao productDao=new EbProductDao();
         List<EbProduct> productList=productDao.getProduct();
          request.setAttribute("productList",productList);

@@ -14,17 +14,55 @@ import java.util.List;
  * Created  on 2016/7/6.
  */
 public class EbNewsController extends HttpServlet {
+    EbNewsDao newsDao = new EbNewsDao();
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //
-        EbNewsDao newsDao = new EbNewsDao();
-        List<EbNews> list = newsDao.getNews();
-        request.setAttribute("newList",list);
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("utf-8");
+        String action = request.getParameter("action");
+        if("list".equals(action)){   //列表
+            list(request, response);
+        }else if("detail".equals(action)){  //详情
+            detail(request,response);
+        }else{
+            list(request, response);
+        }
+    }
 
+    /**
+     * 新闻列表
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
+    public void list(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        List<EbNews> list = newsDao.getNews();
+        request.setAttribute("newsList",list);
         //跳转
         request.getRequestDispatcher("/index.jsp").forward(request,response);
+    }
+
+    /**
+     * 新闻详情
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
+    public void detail(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        String paramsId = request.getParameter("id");
+        int id = 0;
+        if(paramsId!=null && !"".equals(paramsId)){
+            id = Integer.valueOf(paramsId);
+        }
+
+        EbNews news = newsDao.getNewsById(id);
+        request.setAttribute("news",news);
+        request.getRequestDispatcher("/news-view.jsp").forward(request,response);
     }
 }

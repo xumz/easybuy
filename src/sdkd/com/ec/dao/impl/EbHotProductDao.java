@@ -23,6 +23,7 @@ public class EbHotProductDao extends BaseDao {
                 product.setEp_name(rs.getString("ep_name"));
                 product.setEp_description(rs.getString("ep_description"));
                 product.setEp_price(rs.getDouble("ep_price"));
+                product.setEp_file_name(rs.getString("ep_file_name"));
                 hotproductList.add(product);
             }
         } catch (SQLException e) {

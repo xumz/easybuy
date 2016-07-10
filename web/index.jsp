@@ -98,7 +98,7 @@
         <c:forEach var="product" items="${productList}">
         <li>
           <dl>
-              <dt><a href="product-view.jsp" target="_blank"><img src="images/product/${product.ep_id}.jpg" /></a></dt>
+              <dt><a href="product-view.jsp" target="_blank"><img src="${product.ep_file_name}" /></a></dt>
               <dd class="title"><a href="product-view.jsp" target="_blank">${product.ep_name}</a></dd>
               <dd class="price">${product.ep_price}</dd>
           </dl>
@@ -111,7 +111,7 @@
         <h4>最新公告</h4>
         <ul>
           <c:forEach var="notice" items="${noticeList}">
-            <li><a href="news-view.jsp?id=${notice.eba_id}" target="_blank">${notice.eba_title}</a></li>
+            <li><a href="/notice.do?id=${notice.eba_id}&action=detail" target="_blank">${notice.eba_title}</a></li>
           </c:forEach>
         </ul>
       </div>
@@ -119,8 +119,8 @@
       <div class="news-list">
         <h4>新闻动态</h4>
         <ul>
-          <c:forEach var="news" items="${newList}">
-          <li><a href="news-view.jsp?id=${news.enId}" target="_blank">${news.enTitle}</a></li>
+          <c:forEach var="news" items="${newsList}">
+            <li><a href="/news.do?id=${news.enId}&action=detail" target="_blank">${news.enTitle}</a></li>
           </c:forEach>
         </ul>
       </div>
@@ -132,7 +132,7 @@
         <c:forEach var="hotproduct" items="${hotproductList}">
           <li>
             <dl>
-              <dt><a href="product-view.jsp" target="_blank"><img src="images/product/${hotproduct.ep_id}.jpg" /></a></dt>
+              <dt><a href="product-view.jsp" target="_blank"><img src="${hotproduct.ep_file_name}" /></a></dt>
               <dd class="title"><a href="product-view.jsp" target="_blank">${hotproduct.ep_name}</a></dd>
               <dd class="price">${hotproduct.ep_price}</dd>
             </dl>
